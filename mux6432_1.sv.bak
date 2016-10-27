@@ -1,0 +1,17 @@
+module mux6432_1(sel,in,out);
+	input logic [4:0]sel;
+	input logic [31:0][63:0]in;
+	output logic [63:0]out;
+	logic [31:0]rin;
+	
+	integer i = 0;
+	while(i < 64) begin
+		for(j=0; j<32; j++) begin
+		  rin[i]= in[j][i];
+		end
+		mux32_1 m (sel,rin,out[i]);
+		i++;
+	end
+endmodule
+		
+		  

@@ -1,0 +1,4 @@
+module mux32_1(out, in, reReg);
+output logic out;
+input logic reReg[4:0];
+input logic in[31:0];

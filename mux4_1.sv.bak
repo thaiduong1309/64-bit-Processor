@@ -1,0 +1,7 @@
+module mux4_1(sel,in,out);
+	input logic [1:0]sel;
+	input logic [3:0]in;
+	output logic out;
+	
+	mux2_1 m1(sel,in)
+	mux2_1

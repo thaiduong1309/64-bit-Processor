@@ -1,0 +1,10 @@
+module enDecoder2_4(en,in,out);
+	input logic in[1:0];
+	input logic en;
+	output logic out[3:0];
+	
+	logic nout[1:0]
+	enDecoder1_2 n1(en,in[0],nout[1:0]);
+	enDecoder1_2 a1(nout[1],in[1],out[1:0]);
+	enDecoder1_2 a1(nout[1],in[1],out[1:0]);
+endmodule

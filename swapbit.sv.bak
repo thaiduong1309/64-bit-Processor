@@ -1,0 +1,10 @@
+module swapbit(in,out)
+input logic [31:0][63:0] in;
+output logic [63:0][31:0] out;
+
+integer i,j;
+
+for (i=0; i<32; i++)
+	for (j=0; j<64; j++)
+		assign out[j][i]=in[i][j];
+endmodule;

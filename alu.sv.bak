@@ -1,0 +1,19 @@
+module alu (A,B,cntrl,result,negative,zero,overflow,carry_out);
+	input logic		[63:0]	A, B;
+	input logic		[2:0]		cntrl;
+	output logic	[63:0]	result;
+	output logic	negative, zero, overflow, carry_out ;
+
+	genvar i;
+ 
+	logic [63:0]c
+ 
+ generate
+	for(i=0; i<WIDTH; i++) begin : eachDff
+		
+		Bit_slice b (cntrl,A[i],B[i],c[i],c[i+1],result[i]); 
+	
+	end
+ 
+ endgenerate	
+endmodule

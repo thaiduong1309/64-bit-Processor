@@ -1,0 +1,39 @@
+module Bit_Slice(in, s, cin, cout, Ri);
+					 
+	input logic [1:0]in, [2:0]s, cin;
+	output logic sum;
+	
+	logic notb
+	logic [2:0]out;
+	logic outadd, outsub, outand, outor;	
+	
+	
+	logic outb;
+	
+	not n1(notb,in[1]);
+	
+	
+	
+	
+	
+	
+	
+	full_adder fa(in[0], in[1], cin, sum, outadd);
+	subs sub(in[0], in[1], cin, cout, outsub);
+	Add a1(in[0], in[1], outand);
+	Or o1(in[0], in[1], outor);
+	
+	
+	
+	
+	mux8_1 m8(s, {})
+	
+	
+	//mux for the b input to the adder
+	mux2_1 m1(s0, {b1, notb}, outb);
+	
+	full_adder a1(ai, outb,)
+	
+	
+	
+endmodule

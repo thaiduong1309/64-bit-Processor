@@ -1,0 +1,11 @@
+module enDecoder1_2 (en,in,out);
+	output logic [1:0] out ;
+	input logic in; 
+	input logic en ;
+   logic notIn;  
+	
+	 
+	not n1(notIn,in); 
+   and a1(out[0],en,notIn);  
+	and a2(out[1],en,in);
+endmodule 

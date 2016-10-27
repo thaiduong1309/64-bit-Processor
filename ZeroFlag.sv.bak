@@ -1,0 +1,13 @@
+module ZeroFlag(out,in);
+	input logic in[63:0];
+	output logic out;
+	
+	logic [1:0]re;
+	logic b
+	
+	or32 o1(re[0],in[31:0]);
+	or32 o2(re[1],in[63:32]);
+	or32 o3(b,re[0],re[1]);
+   not (out,b);
+	
+endmodule

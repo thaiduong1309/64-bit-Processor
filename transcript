@@ -1,0 +1,348 @@
+# Reading C:/altera/14.0/modelsim_ase/tcl/vsim/pref.tcl 
+do runlab6.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# 
+# Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
+# -- Compiling module alu
+# -- Compiling module alustim
+# 
+# Top level modules:
+# 	alustim
+# Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
+# -- Compiling module Bit_Slice
+# 
+# Top level modules:
+# 	Bit_Slice
+# Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
+# -- Compiling module full_adder
+# 
+# Top level modules:
+# 	full_adder
+# Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
+# -- Compiling module subs
+# 
+# Top level modules:
+# 	subs
+# Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
+# -- Compiling module or_4
+# 
+# Top level modules:
+# 	or_4
+# Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
+# -- Compiling module or_8
+# 
+# Top level modules:
+# 	or_8
+# Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
+# -- Compiling module or_16
+# 
+# Top level modules:
+# 	or_16
+# Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
+# -- Compiling module or_32
+# 
+# Top level modules:
+# 	or_32
+# Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
+# -- Compiling module ZeroFlag
+# 
+# Top level modules:
+# 	ZeroFlag
+# Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
+# -- Compiling module mux8_1
+# 
+# Top level modules:
+# 	mux8_1
+# Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
+# -- Compiling module mux4_1
+# 
+# Top level modules:
+# 	mux4_1
+# Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
+# -- Compiling module mux2_1
+# 
+# Top level modules:
+# 	mux2_1
+# vsim -lib work -voptargs=\"+acc\" -t 1ps alustim 
+# Loading sv_std.std
+# Loading work.alustim
+# Loading work.alu
+# Loading work.ZeroFlag
+# Loading work.or_32
+# Loading work.or_16
+# Loading work.or_8
+# Loading work.or_4
+# Loading work.Bit_Slice
+# Loading work.full_adder
+# Loading work.subs
+# Loading work.mux8_1
+# Loading work.mux4_1
+# Loading work.mux2_1
+# WARNING: No extended dataflow license exists
+# .main_pane.wave.interior.cs.body.pw.wf
+# .main_pane.structure.interior.cs.body.struct
+# .main_pane.objects.interior.cs.body.tree
+#    0.00 ns testing PASS_A operations
+# 10000000.00 ns testing addition
+do runlab6.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# 
+# Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
+# -- Compiling module alu
+# -- Compiling module alustim
+# 
+# Top level modules:
+# 	alustim
+# Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
+# -- Compiling module Bit_Slice
+# 
+# Top level modules:
+# 	Bit_Slice
+# Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
+# -- Compiling module full_adder
+# 
+# Top level modules:
+# 	full_adder
+# Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
+# -- Compiling module subs
+# 
+# Top level modules:
+# 	subs
+# Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
+# -- Compiling module or_4
+# 
+# Top level modules:
+# 	or_4
+# Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
+# -- Compiling module or_8
+# 
+# Top level modules:
+# 	or_8
+# Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
+# -- Compiling module or_16
+# 
+# Top level modules:
+# 	or_16
+# Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
+# -- Compiling module or_32
+# 
+# Top level modules:
+# 	or_32
+# Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
+# -- Compiling module ZeroFlag
+# 
+# Top level modules:
+# 	ZeroFlag
+# Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
+# -- Compiling module mux8_1
+# 
+# Top level modules:
+# 	mux8_1
+# Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
+# -- Compiling module mux4_1
+# 
+# Top level modules:
+# 	mux4_1
+# Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
+# -- Compiling module mux2_1
+# 
+# Top level modules:
+# 	mux2_1
+# vsim -lib work -voptargs=\"+acc\" -t 1ps alustim 
+# Loading sv_std.std
+# Loading work.alustim
+# Loading work.alu
+# Loading work.ZeroFlag
+# Loading work.or_32
+# Loading work.or_16
+# Loading work.or_8
+# Loading work.or_4
+# Loading work.Bit_Slice
+# Loading work.full_adder
+# Loading work.subs
+# Loading work.mux8_1
+# Loading work.mux4_1
+# Loading work.mux2_1
+# WARNING: No extended dataflow license exists
+# .main_pane.wave.interior.cs.body.pw.wf
+# .main_pane.structure.interior.cs.body.struct
+# .main_pane.objects.interior.cs.body.tree
+#    0.00 ns testing PASS_A operations
+# 10000000.00 ns testing addition
+do runlab6.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# 
+# Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
+# -- Compiling module alu
+# -- Compiling module alustim
+# 
+# Top level modules:
+# 	alustim
+# Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
+# -- Compiling module Bit_Slice
+# 
+# Top level modules:
+# 	Bit_Slice
+# Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
+# -- Compiling module full_adder
+# 
+# Top level modules:
+# 	full_adder
+# Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
+# -- Compiling module subs
+# 
+# Top level modules:
+# 	subs
+# Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
+# -- Compiling module or_4
+# 
+# Top level modules:
+# 	or_4
+# Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
+# -- Compiling module or_8
+# 
+# Top level modules:
+# 	or_8
+# Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
+# -- Compiling module or_16
+# 
+# Top level modules:
+# 	or_16
+# Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
+# -- Compiling module or_32
+# 
+# Top level modules:
+# 	or_32
+# Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
+# -- Compiling module ZeroFlag
+# 
+# Top level modules:
+# 	ZeroFlag
+# Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
+# -- Compiling module mux8_1
+# 
+# Top level modules:
+# 	mux8_1
+# Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
+# -- Compiling module mux4_1
+# 
+# Top level modules:
+# 	mux4_1
+# Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
+# -- Compiling module mux2_1
+# 
+# Top level modules:
+# 	mux2_1
+# vsim -lib work -voptargs=\"+acc\" -t 1ps alustim 
+# Loading sv_std.std
+# Loading work.alustim
+# Loading work.alu
+# Loading work.ZeroFlag
+# Loading work.or_32
+# Loading work.or_16
+# Loading work.or_8
+# Loading work.or_4
+# Loading work.Bit_Slice
+# Loading work.full_adder
+# Loading work.subs
+# Loading work.mux8_1
+# Loading work.mux4_1
+# Loading work.mux2_1
+# WARNING: No extended dataflow license exists
+# .main_pane.wave.interior.cs.body.pw.wf
+# .main_pane.structure.interior.cs.body.struct
+# .main_pane.objects.interior.cs.body.tree
+#    0.00 ns testing PASS_A operations
+# 10000000.00 ns testing addition
+# 10100000.00 ns testing addition
+# ** Error: Assertion error.
+#    Time: 10200 us  Scope: alustim File: ./alu.sv Line: 93
+write format wave -window .main_pane.wave.interior.cs.body.pw.wf {C:/Hoc/Engineer/EE 469/Lab2_files-20161026T174541Z/Lab2_files/alustim_wave.do}
+do runlab6.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# 
+# Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
+# -- Compiling module alu
+# -- Compiling module alustim
+# 
+# Top level modules:
+# 	alustim
+# Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
+# -- Compiling module Bit_Slice
+# 
+# Top level modules:
+# 	Bit_Slice
+# Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
+# -- Compiling module full_adder
+# 
+# Top level modules:
+# 	full_adder
+# Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
+# -- Compiling module subs
+# 
+# Top level modules:
+# 	subs
+# Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
+# -- Compiling module or_4
+# 
+# Top level modules:
+# 	or_4
+# Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
+# -- Compiling module or_8
+# 
+# Top level modules:
+# 	or_8
+# Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
+# -- Compiling module or_16
+# 
+# Top level modules:
+# 	or_16
+# Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
+# -- Compiling module or_32
+# 
+# Top level modules:
+# 	or_32
+# Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
+# -- Compiling module ZeroFlag
+# 
+# Top level modules:
+# 	ZeroFlag
+# Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
+# -- Compiling module mux8_1
+# 
+# Top level modules:
+# 	mux8_1
+# Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
+# -- Compiling module mux4_1
+# 
+# Top level modules:
+# 	mux4_1
+# Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
+# -- Compiling module mux2_1
+# 
+# Top level modules:
+# 	mux2_1
+# vsim -lib work -voptargs=\"+acc\" -t 1ps alustim 
+# Loading sv_std.std
+# Loading work.alustim
+# Loading work.alu
+# Loading work.mux8_1
+# Loading work.mux4_1
+# Loading work.mux2_1
+# Loading work.ZeroFlag
+# Loading work.or_32
+# Loading work.or_16
+# Loading work.or_8
+# Loading work.or_4
+# Loading work.Bit_Slice
+# Loading work.full_adder
+# Loading work.subs
+# WARNING: No extended dataflow license exists
+# .main_pane.wave.interior.cs.body.pw.wf
+# .main_pane.structure.interior.cs.body.struct
+# .main_pane.objects.interior.cs.body.tree
+#    0.00 ns testing PASS_A operations
+# 10000000.00 ns testing addition
+# 10100000.00 ns testing addition
+# ** Error: Assertion error.
+#    Time: 10200 us  Scope: alustim File: ./alu.sv Line: 94

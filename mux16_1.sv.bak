@@ -1,0 +1,14 @@
+module mux16_1(sel,in,out);
+	input logic [3:0]sel;
+	input logic [15:0]in;
+	output logic out;
+	
+	logic [3:0]selout; 
+	mux4_1(sel[1:0],in[3:0],selout[0]);
+	mux4_1(sel[1:0],in[7:4],selout[1]);
+	mux4_1(sel[1:0],in[11:8],selout[2]);
+	mux4_1(sel[1:0],in[15:12],selout[3]);
+	mux4_1(sel[3:2],selout,out);
+	
+endmodule
+	

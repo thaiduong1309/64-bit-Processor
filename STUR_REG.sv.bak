@@ -1,0 +1,15 @@
+module STUR_REG(writeData, chooseREG);
+
+	input logic writeData;
+	logic [31:0]chooseREG;
+	
+	
+	Stur_Reg[31:0][63:0];
+	
+	
+	
+	Stur_Reg[chooseREG][
+	
+	
+	
+	

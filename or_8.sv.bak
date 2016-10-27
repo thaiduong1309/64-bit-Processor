@@ -1,0 +1,11 @@
+module or_8 (out,in);
+	input logic in[7:0];
+	output logic out;
+	
+	logic [1:0]re;
+	
+	or_4 o1(re[0],in[3:0]);
+	or_4 o2(re[1],in[7:4]);
+	or_4 o3(out,re[0],re[1]);
+
+endmodule
