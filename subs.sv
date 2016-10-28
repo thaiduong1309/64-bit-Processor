@@ -4,13 +4,14 @@
 module subs(a, b, cin, sum, cout);
 					 
 	input logic a, b, cin;
+	//outputs to subtraction 
 	output logic cout, sum;
+	//input b for subtraction
 	logic notb;
-	
+	//invert the b for the substraction.
 	not n1(notb, b);
-	
-	
 	//logic [2:0]out;
+	//call the full adder but with an inverted b.
 	full_adder sub (a,notb,cin,sum,cout);
 	
 //	xor xorgate (out[0], a, notb); // Sets output to XOR of inputs

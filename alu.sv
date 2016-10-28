@@ -86,6 +86,8 @@ module alustim();
 	logic [63:0] test_val;
 	initial begin
 	
+//*************************************************************/
+// PASSING VALUE cntrl =000
 		$display("%t testing PASS_A operations", $time);
 		cntrl = ALU_PASS_B;
 		for (i=0; i<100; i++) begin
@@ -93,7 +95,9 @@ module alustim();
 			#(delay);
 			assert(result == B && negative == B[63] && zero == (B == '0));
 		end
-		
+	
+//*************************************************************/	
+// ADDING A+B cntrl = 010
 		$display("%t testing addition", $time);
 		cntrl = ALU_ADD;
 		A = 64'h0000000000000001; B = 64'h0000000000000001;
@@ -112,6 +116,8 @@ module alustim();
 		#(delay);
 		assert(result == 64'd0 && carry_out == 1 && overflow == 1 && negative == 0 && zero == 1);
 		
+//*************************************************************/	
+// SUBTRACTING A-B cntrl = 011
 		$display("%t testing addition", $time);
 		cntrl = ALU_SUBTRACT;
 		A = 64'h0000000000000111; B = 64'h0000000000000111;
@@ -123,7 +129,7 @@ module alustim();
 		cntrl = ALU_SUBTRACT;
 		A = 64'h8000000000000000; B = 64'h0fffffffffffffff;
 		#(delay);
-		assert(result == 64'd0 && carry_out == 1 && overflow == 1 && negative == 0 && zero == 0);
+		assert(result == 64'h7000000000000001 && carry_out == 1 && overflow == 1 && negative == 0 && zero == 0);
 		
 		$display("%t testing addition", $time);
 		cntrl = ALU_SUBTRACT;
@@ -133,13 +139,45 @@ module alustim();
 			assert(result == (A - B) && negative == result[63] && zero == (result == '0));
 		end
 		
+//*************************************************************/	
+// AND GATE BIT BY BIT cntrl = 100
 		$display("%t testing addition", $time);
 		cntrl = ALU_AND;
-		for (i=0; i<13; i++) begin
-			A = $random(); B = $random();
-			#(delay);
-			assert(result == (A&B) && negative == result[63] && zero == (result == '0));
-		end
+		A = 64'hf01000000000000f; B = 64'h8fffffffffffffff;
+		#(delay);
+		assert(result == 64'h801000000000000f && /*carry_out == 1'bx && overflow == 1'bx &&*/ negative == 1 && zero == 0);
+		
+//*************************************************************/	
+// OR GATE BIT BY BIT cntrl = 100
+		$display("%t testing addition", $time);
+		cntrl = ALU_OR;
+		A = 64'h3000000000000000; B = 64'h5fffffffffff1309;
+		#(delay);
+		assert(result == 64'h7fffffffffff1309 && /*carry_out == 1'bx && overflow == 1'bx &&*/ negative == 0 && zero == 0);
+		
+//*************************************************************/	
+// XOR GATE BIT BY BIT cntrl = 110
+		$display("%t testing addition", $time);
+		cntrl = ALU_XOR;
+		A = 64'h80000000000000ef; B = 64'h9fffffffffffffff;
+		#(delay);
+		assert(result == 64'h1fffffffffffff10 && /*carry_out == 1'bx && overflow == 1'bx &&*/ negative == 0 && zero == 0);
+		
+//*************************************************************/	
+// cntrl = 111 NOTHING HAPPENED
+		$display("%t testing addition", $time);
+		cntrl = 3'b111;
+		A = 64'h8000000000000000; B = 64'h0fffffffffffffff;
+		#(delay);
+		//assert(result == 64'd0 && carry_out == 1 && overflow == 1 && negative == 0 && zero == 0);
+		
+//*************************************************************/	
+// cntrl = 001 NOTHING HAPPENED
+		$display("%t testing addition", $time);
+		cntrl = 3'b001;
+		A = 64'h8000000000000000; B = 64'h0fffffffffffffff;
+		#(delay);
+		//assert(result == 64'd0 && carry_out == 1 && overflow == 1 && negative == 0 && zero == 0);
 		
 	end
 endmodule

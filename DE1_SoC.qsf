@@ -394,10 +394,6 @@ set_global_assignment -name SYSTEMVERILOG_FILE Bit_Slice.sv
 set_global_assignment -name SYSTEMVERILOG_FILE full_adder.sv
 set_global_assignment -name SYSTEMVERILOG_FILE subs.sv
 set_global_assignment -name SDC_FILE DE1_SoC.sdc
-set_global_assignment -name SYSTEMVERILOG_FILE enDecoder1_2.sv
-set_global_assignment -name SYSTEMVERILOG_FILE enDecoder2_4.sv
-set_global_assignment -name SYSTEMVERILOG_FILE enDecoder4_16.sv
-set_global_assignment -name SYSTEMVERILOG_FILE enDecoder5_32.sv
 set_global_assignment -name SYSTEMVERILOG_FILE mux2_1.sv
 set_global_assignment -name SYSTEMVERILOG_FILE mux4_1.sv
 set_global_assignment -name SYSTEMVERILOG_FILE mux8_1.sv
