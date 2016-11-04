@@ -1,2 +1,2 @@
-Author1: Duong Bui
-Author2: Devin Stoen
+Name1: Duong Bui
+Name2: Devin Stoen

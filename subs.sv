@@ -1,5 +1,6 @@
 //Name1: Duong Bui
 //Name2: Devin Stoen
+`timescale 1ns/10ps
 
 module subs(a, b, cin, sum, cout);
 					 
@@ -9,7 +10,7 @@ module subs(a, b, cin, sum, cout);
 	//input b for subtraction
 	logic notb;
 	//invert the b for the substraction.
-	not n1(notb, b);
+	not #50 n1(notb, b);
 	//logic [2:0]out;
 	//call the full adder but with an inverted b.
 	full_adder sub (a,notb,cin,sum,cout);
