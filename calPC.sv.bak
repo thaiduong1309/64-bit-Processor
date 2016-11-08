@@ -1,0 +1,13 @@
+module calPC (PC,PC_result, CondAddr19, BRAddr26, UncondBr, BrTaken);
+	input logic [63:0] PC, CondAddr19, BRAddr26;
+	input logic UncondBr, BrTaken;
+	output logic [63:0] PC_result;
+
+	logic [63:0]result1, result2;
+	logic result, negative, zero, overflow, carry_out;
+	
+	
+	alu add1 (PC,B,cntrl,result,negative,zero,overflow,carry_out);
+	alu add2 (PC,B,cntrl,result,negative,zero,overflow,carry_out);
+	
+	mux64_2_1 m1 (BrTaken, result1, result2, PC_result);
