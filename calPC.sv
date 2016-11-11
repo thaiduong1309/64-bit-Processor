@@ -1,5 +1,7 @@
-module calPC (PC,PC_result, CondAddr19, BRAddr26, UncondBr, BrTaken);
-	input logic [63:0] PC, CondAddr19, BRAddr26;
+`timescale 1 ps / 100 fs
+
+module calPC (PC,PC_result, CondAddr19, BrAddr26, UncondBr, BrTaken);
+	input logic [63:0] PC, CondAddr19, BrAddr26;
 	input logic UncondBr, BrTaken;
 	output logic [63:0] PC_result;
 

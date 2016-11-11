@@ -1,3 +1,5 @@
+`timescale 1 ps / 100 fs
+
 module mux64_2_1 (sel, in0, in1, out);
 	input logic sel;
 	input logic [63:0] in0, in1;

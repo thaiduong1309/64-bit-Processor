@@ -1,37 +1,73 @@
-Analysis & Synthesis report for DE1_SoC
-Sat Nov 05 19:56:58 2016
-Quartus II 64-Bit Version 14.0.0 Build 200 06/17/2014 SJ Web Edition
+Analysis & Elaboration report for DE1_SoC
+Thu Nov 10 11:14:03 2016
+Quartus Prime Version 16.0.0 Build 211 04/27/2016 SJ Standard Edition
 
 
 ---------------------
 ; Table of Contents ;
 ---------------------
   1. Legal Notice
-  2. Analysis & Synthesis Summary
-  3. Analysis & Synthesis Settings
-  4. Parallel Compilation
-  5. Analysis & Synthesis Source Files Read
-  6. Analysis & Synthesis Resource Usage Summary
-  7. Analysis & Synthesis Resource Utilization by Entity
-  8. General Register Statistics
-  9. Post-Synthesis Netlist Statistics for Top Partition
- 10. Elapsed Time Per Partition
- 11. Analysis & Synthesis Messages
- 12. Analysis & Synthesis Suppressed Messages
+  2. Analysis & Elaboration Summary
+  3. Parallel Compilation
+  4. Parameter Settings for User Entity Instance: DFF_VAR:cp
+  5. Parameter Settings for User Entity Instance: calPC:cal|alu:add0
+  6. Parameter Settings for User Entity Instance: calPC:cal|alu:add1
+  7. Parameter Settings for User Entity Instance: regfile:r|DFF_REG:d1|DFF_VAR:eachDff[0].REG
+  8. Parameter Settings for User Entity Instance: regfile:r|DFF_REG:d1|DFF_VAR:eachDff[1].REG
+  9. Parameter Settings for User Entity Instance: regfile:r|DFF_REG:d1|DFF_VAR:eachDff[2].REG
+ 10. Parameter Settings for User Entity Instance: regfile:r|DFF_REG:d1|DFF_VAR:eachDff[3].REG
+ 11. Parameter Settings for User Entity Instance: regfile:r|DFF_REG:d1|DFF_VAR:eachDff[4].REG
+ 12. Parameter Settings for User Entity Instance: regfile:r|DFF_REG:d1|DFF_VAR:eachDff[5].REG
+ 13. Parameter Settings for User Entity Instance: regfile:r|DFF_REG:d1|DFF_VAR:eachDff[6].REG
+ 14. Parameter Settings for User Entity Instance: regfile:r|DFF_REG:d1|DFF_VAR:eachDff[7].REG
+ 15. Parameter Settings for User Entity Instance: regfile:r|DFF_REG:d1|DFF_VAR:eachDff[8].REG
+ 16. Parameter Settings for User Entity Instance: regfile:r|DFF_REG:d1|DFF_VAR:eachDff[9].REG
+ 17. Parameter Settings for User Entity Instance: regfile:r|DFF_REG:d1|DFF_VAR:eachDff[10].REG
+ 18. Parameter Settings for User Entity Instance: regfile:r|DFF_REG:d1|DFF_VAR:eachDff[11].REG
+ 19. Parameter Settings for User Entity Instance: regfile:r|DFF_REG:d1|DFF_VAR:eachDff[12].REG
+ 20. Parameter Settings for User Entity Instance: regfile:r|DFF_REG:d1|DFF_VAR:eachDff[13].REG
+ 21. Parameter Settings for User Entity Instance: regfile:r|DFF_REG:d1|DFF_VAR:eachDff[14].REG
+ 22. Parameter Settings for User Entity Instance: regfile:r|DFF_REG:d1|DFF_VAR:eachDff[15].REG
+ 23. Parameter Settings for User Entity Instance: regfile:r|DFF_REG:d1|DFF_VAR:eachDff[16].REG
+ 24. Parameter Settings for User Entity Instance: regfile:r|DFF_REG:d1|DFF_VAR:eachDff[17].REG
+ 25. Parameter Settings for User Entity Instance: regfile:r|DFF_REG:d1|DFF_VAR:eachDff[18].REG
+ 26. Parameter Settings for User Entity Instance: regfile:r|DFF_REG:d1|DFF_VAR:eachDff[19].REG
+ 27. Parameter Settings for User Entity Instance: regfile:r|DFF_REG:d1|DFF_VAR:eachDff[20].REG
+ 28. Parameter Settings for User Entity Instance: regfile:r|DFF_REG:d1|DFF_VAR:eachDff[21].REG
+ 29. Parameter Settings for User Entity Instance: regfile:r|DFF_REG:d1|DFF_VAR:eachDff[22].REG
+ 30. Parameter Settings for User Entity Instance: regfile:r|DFF_REG:d1|DFF_VAR:eachDff[23].REG
+ 31. Parameter Settings for User Entity Instance: regfile:r|DFF_REG:d1|DFF_VAR:eachDff[24].REG
+ 32. Parameter Settings for User Entity Instance: regfile:r|DFF_REG:d1|DFF_VAR:eachDff[25].REG
+ 33. Parameter Settings for User Entity Instance: regfile:r|DFF_REG:d1|DFF_VAR:eachDff[26].REG
+ 34. Parameter Settings for User Entity Instance: regfile:r|DFF_REG:d1|DFF_VAR:eachDff[27].REG
+ 35. Parameter Settings for User Entity Instance: regfile:r|DFF_REG:d1|DFF_VAR:eachDff[28].REG
+ 36. Parameter Settings for User Entity Instance: regfile:r|DFF_REG:d1|DFF_VAR:eachDff[29].REG
+ 37. Parameter Settings for User Entity Instance: regfile:r|DFF_REG:d1|DFF_VAR:eachDff[30].REG
+ 38. Parameter Settings for User Entity Instance: alu:exc
+ 39. Analysis & Elaboration Settings
+ 40. Port Connectivity Checks: "alu:exc"
+ 41. Port Connectivity Checks: "Control:c1"
+ 42. Port Connectivity Checks: "calPC:cal|alu:add1"
+ 43. Port Connectivity Checks: "calPC:cal|alu:add0|mux8_1:m1"
+ 44. Port Connectivity Checks: "calPC:cal|alu:add0"
+ 45. Port Connectivity Checks: "calPC:cal|shifter:s1"
+ 46. Port Connectivity Checks: "DFF_VAR:cp"
+ 47. Analysis & Elaboration Messages
+ 48. Analysis & Elaboration Suppressed Messages
 
 
 
 ----------------
 ; Legal Notice ;
 ----------------
-Copyright (C) 1991-2014 Altera Corporation. All rights reserved.
+Copyright (C) 1991-2016 Altera Corporation. All rights reserved.
 Your use of Altera Corporation's design tools, logic functions 
 and other software and tools, and its AMPP partner logic 
 functions, and any output files from any of the foregoing 
 (including device programming or simulation files), and any 
 associated documentation or information are expressly subject 
 to the terms and conditions of the Altera Program License 
-Subscription Agreement, the Altera Quartus II License Agreement,
+Subscription Agreement, the Altera Quartus Prime License Agreement,
 the Altera MegaCore Function License Agreement, or other 
 applicable license agreement, including, without limitation, 
 that your use is for the sole purpose of programming logic 
@@ -41,36 +77,397 @@ agreement for further details.
 
 
 
-+------------------------------------------------------------------------------+
-; Analysis & Synthesis Summary                                                 ;
-+---------------------------------+--------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Sat Nov 05 19:56:58 2016      ;
-; Quartus II 64-Bit Version       ; 14.0.0 Build 200 06/17/2014 SJ Web Edition ;
-; Revision Name                   ; DE1_SoC                                    ;
-; Top-level Entity Name           ; mux64_2_1                                  ;
-; Family                          ; Cyclone V                                  ;
-; Logic utilization (in ALMs)     ; N/A                                        ;
-; Total registers                 ; 0                                          ;
-; Total pins                      ; 193                                        ;
-; Total virtual pins              ; 0                                          ;
-; Total block memory bits         ; 0                                          ;
-; Total DSP Blocks                ; 0                                          ;
-; Total HSSI RX PCSs              ; 0                                          ;
-; Total HSSI PMA RX Deserializers ; 0                                          ;
-; Total HSSI TX PCSs              ; 0                                          ;
-; Total HSSI PMA TX Serializers   ; 0                                          ;
-; Total PLLs                      ; 0                                          ;
-; Total DLLs                      ; 0                                          ;
-+---------------------------------+--------------------------------------------+
++---------------------------------------------------------------------------------+
+; Analysis & Elaboration Summary                                                  ;
++-------------------------------+-------------------------------------------------+
+; Analysis & Elaboration Status ; Successful - Thu Nov 10 11:14:03 2016           ;
+; Quartus Prime Version         ; 16.0.0 Build 211 04/27/2016 SJ Standard Edition ;
+; Revision Name                 ; DE1_SoC                                         ;
+; Top-level Entity Name         ; CPU                                             ;
+; Family                        ; Cyclone V                                       ;
+; Logic utilization (in ALMs)   ; N/A until Partition Merge                       ;
+; Total registers               ; N/A until Partition Merge                       ;
+; Total pins                    ; N/A until Partition Merge                       ;
+; Total virtual pins            ; N/A until Partition Merge                       ;
+; Total block memory bits       ; N/A until Partition Merge                       ;
+; Total PLLs                    ; N/A until Partition Merge                       ;
+; Total DLLs                    ; N/A until Partition Merge                       ;
++-------------------------------+-------------------------------------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 8           ;
+; Maximum allowed            ; 4           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 1           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
++----------------------------+-------------+
+
+
++---------------------------------------------------------+
+; Parameter Settings for User Entity Instance: DFF_VAR:cp ;
++----------------+-------+--------------------------------+
+; Parameter Name ; Value ; Type                           ;
++----------------+-------+--------------------------------+
+; WIDTH          ; 64    ; Signed Integer                 ;
++----------------+-------+--------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: calPC:cal|alu:add0 ;
++----------------+----------+-------------------------------------+
+; Parameter Name ; Value    ; Type                                ;
++----------------+----------+-------------------------------------+
+; c_in           ; 00001000 ; Unsigned Binary                     ;
++----------------+----------+-------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: calPC:cal|alu:add1 ;
++----------------+----------+-------------------------------------+
+; Parameter Name ; Value    ; Type                                ;
++----------------+----------+-------------------------------------+
+; c_in           ; 00001000 ; Unsigned Binary                     ;
++----------------+----------+-------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: regfile:r|DFF_REG:d1|DFF_VAR:eachDff[0].REG ;
++----------------+-------+-----------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                            ;
++----------------+-------+-----------------------------------------------------------------+
+; WIDTH          ; 64    ; Signed Integer                                                  ;
++----------------+-------+-----------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: regfile:r|DFF_REG:d1|DFF_VAR:eachDff[1].REG ;
++----------------+-------+-----------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                            ;
++----------------+-------+-----------------------------------------------------------------+
+; WIDTH          ; 64    ; Signed Integer                                                  ;
++----------------+-------+-----------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: regfile:r|DFF_REG:d1|DFF_VAR:eachDff[2].REG ;
++----------------+-------+-----------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                            ;
++----------------+-------+-----------------------------------------------------------------+
+; WIDTH          ; 64    ; Signed Integer                                                  ;
++----------------+-------+-----------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: regfile:r|DFF_REG:d1|DFF_VAR:eachDff[3].REG ;
++----------------+-------+-----------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                            ;
++----------------+-------+-----------------------------------------------------------------+
+; WIDTH          ; 64    ; Signed Integer                                                  ;
++----------------+-------+-----------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: regfile:r|DFF_REG:d1|DFF_VAR:eachDff[4].REG ;
++----------------+-------+-----------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                            ;
++----------------+-------+-----------------------------------------------------------------+
+; WIDTH          ; 64    ; Signed Integer                                                  ;
++----------------+-------+-----------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: regfile:r|DFF_REG:d1|DFF_VAR:eachDff[5].REG ;
++----------------+-------+-----------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                            ;
++----------------+-------+-----------------------------------------------------------------+
+; WIDTH          ; 64    ; Signed Integer                                                  ;
++----------------+-------+-----------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: regfile:r|DFF_REG:d1|DFF_VAR:eachDff[6].REG ;
++----------------+-------+-----------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                            ;
++----------------+-------+-----------------------------------------------------------------+
+; WIDTH          ; 64    ; Signed Integer                                                  ;
++----------------+-------+-----------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: regfile:r|DFF_REG:d1|DFF_VAR:eachDff[7].REG ;
++----------------+-------+-----------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                            ;
++----------------+-------+-----------------------------------------------------------------+
+; WIDTH          ; 64    ; Signed Integer                                                  ;
++----------------+-------+-----------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: regfile:r|DFF_REG:d1|DFF_VAR:eachDff[8].REG ;
++----------------+-------+-----------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                            ;
++----------------+-------+-----------------------------------------------------------------+
+; WIDTH          ; 64    ; Signed Integer                                                  ;
++----------------+-------+-----------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: regfile:r|DFF_REG:d1|DFF_VAR:eachDff[9].REG ;
++----------------+-------+-----------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                            ;
++----------------+-------+-----------------------------------------------------------------+
+; WIDTH          ; 64    ; Signed Integer                                                  ;
++----------------+-------+-----------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: regfile:r|DFF_REG:d1|DFF_VAR:eachDff[10].REG ;
++----------------+-------+------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                             ;
++----------------+-------+------------------------------------------------------------------+
+; WIDTH          ; 64    ; Signed Integer                                                   ;
++----------------+-------+------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: regfile:r|DFF_REG:d1|DFF_VAR:eachDff[11].REG ;
++----------------+-------+------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                             ;
++----------------+-------+------------------------------------------------------------------+
+; WIDTH          ; 64    ; Signed Integer                                                   ;
++----------------+-------+------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: regfile:r|DFF_REG:d1|DFF_VAR:eachDff[12].REG ;
++----------------+-------+------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                             ;
++----------------+-------+------------------------------------------------------------------+
+; WIDTH          ; 64    ; Signed Integer                                                   ;
++----------------+-------+------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: regfile:r|DFF_REG:d1|DFF_VAR:eachDff[13].REG ;
++----------------+-------+------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                             ;
++----------------+-------+------------------------------------------------------------------+
+; WIDTH          ; 64    ; Signed Integer                                                   ;
++----------------+-------+------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: regfile:r|DFF_REG:d1|DFF_VAR:eachDff[14].REG ;
++----------------+-------+------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                             ;
++----------------+-------+------------------------------------------------------------------+
+; WIDTH          ; 64    ; Signed Integer                                                   ;
++----------------+-------+------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: regfile:r|DFF_REG:d1|DFF_VAR:eachDff[15].REG ;
++----------------+-------+------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                             ;
++----------------+-------+------------------------------------------------------------------+
+; WIDTH          ; 64    ; Signed Integer                                                   ;
++----------------+-------+------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: regfile:r|DFF_REG:d1|DFF_VAR:eachDff[16].REG ;
++----------------+-------+------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                             ;
++----------------+-------+------------------------------------------------------------------+
+; WIDTH          ; 64    ; Signed Integer                                                   ;
++----------------+-------+------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: regfile:r|DFF_REG:d1|DFF_VAR:eachDff[17].REG ;
++----------------+-------+------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                             ;
++----------------+-------+------------------------------------------------------------------+
+; WIDTH          ; 64    ; Signed Integer                                                   ;
++----------------+-------+------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: regfile:r|DFF_REG:d1|DFF_VAR:eachDff[18].REG ;
++----------------+-------+------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                             ;
++----------------+-------+------------------------------------------------------------------+
+; WIDTH          ; 64    ; Signed Integer                                                   ;
++----------------+-------+------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: regfile:r|DFF_REG:d1|DFF_VAR:eachDff[19].REG ;
++----------------+-------+------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                             ;
++----------------+-------+------------------------------------------------------------------+
+; WIDTH          ; 64    ; Signed Integer                                                   ;
++----------------+-------+------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: regfile:r|DFF_REG:d1|DFF_VAR:eachDff[20].REG ;
++----------------+-------+------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                             ;
++----------------+-------+------------------------------------------------------------------+
+; WIDTH          ; 64    ; Signed Integer                                                   ;
++----------------+-------+------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: regfile:r|DFF_REG:d1|DFF_VAR:eachDff[21].REG ;
++----------------+-------+------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                             ;
++----------------+-------+------------------------------------------------------------------+
+; WIDTH          ; 64    ; Signed Integer                                                   ;
++----------------+-------+------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: regfile:r|DFF_REG:d1|DFF_VAR:eachDff[22].REG ;
++----------------+-------+------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                             ;
++----------------+-------+------------------------------------------------------------------+
+; WIDTH          ; 64    ; Signed Integer                                                   ;
++----------------+-------+------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: regfile:r|DFF_REG:d1|DFF_VAR:eachDff[23].REG ;
++----------------+-------+------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                             ;
++----------------+-------+------------------------------------------------------------------+
+; WIDTH          ; 64    ; Signed Integer                                                   ;
++----------------+-------+------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: regfile:r|DFF_REG:d1|DFF_VAR:eachDff[24].REG ;
++----------------+-------+------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                             ;
++----------------+-------+------------------------------------------------------------------+
+; WIDTH          ; 64    ; Signed Integer                                                   ;
++----------------+-------+------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: regfile:r|DFF_REG:d1|DFF_VAR:eachDff[25].REG ;
++----------------+-------+------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                             ;
++----------------+-------+------------------------------------------------------------------+
+; WIDTH          ; 64    ; Signed Integer                                                   ;
++----------------+-------+------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: regfile:r|DFF_REG:d1|DFF_VAR:eachDff[26].REG ;
++----------------+-------+------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                             ;
++----------------+-------+------------------------------------------------------------------+
+; WIDTH          ; 64    ; Signed Integer                                                   ;
++----------------+-------+------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: regfile:r|DFF_REG:d1|DFF_VAR:eachDff[27].REG ;
++----------------+-------+------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                             ;
++----------------+-------+------------------------------------------------------------------+
+; WIDTH          ; 64    ; Signed Integer                                                   ;
++----------------+-------+------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: regfile:r|DFF_REG:d1|DFF_VAR:eachDff[28].REG ;
++----------------+-------+------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                             ;
++----------------+-------+------------------------------------------------------------------+
+; WIDTH          ; 64    ; Signed Integer                                                   ;
++----------------+-------+------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: regfile:r|DFF_REG:d1|DFF_VAR:eachDff[29].REG ;
++----------------+-------+------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                             ;
++----------------+-------+------------------------------------------------------------------+
+; WIDTH          ; 64    ; Signed Integer                                                   ;
++----------------+-------+------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: regfile:r|DFF_REG:d1|DFF_VAR:eachDff[30].REG ;
++----------------+-------+------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                             ;
++----------------+-------+------------------------------------------------------------------+
+; WIDTH          ; 64    ; Signed Integer                                                   ;
++----------------+-------+------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------+
+; Parameter Settings for User Entity Instance: alu:exc ;
++----------------+----------+--------------------------+
+; Parameter Name ; Value    ; Type                     ;
++----------------+----------+--------------------------+
+; c_in           ; 00001000 ; Unsigned Binary          ;
++----------------+----------+--------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
 +---------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Settings                                                                                             ;
+; Analysis & Elaboration Settings                                                                                           ;
 +---------------------------------------------------------------------------------+--------------------+--------------------+
 ; Option                                                                          ; Setting            ; Default Value      ;
 +---------------------------------------------------------------------------------+--------------------+--------------------+
 ; Device                                                                          ; 5CGXFC7C7F23C8     ;                    ;
-; Top-level entity name                                                           ; mux64_2_1          ; DE1_SoC            ;
+; Top-level entity name                                                           ; CPU                ; DE1_SoC            ;
 ; Family name                                                                     ; Cyclone V          ; Cyclone V          ;
 ; Use smart compilation                                                           ; Off                ; Off                ;
 ; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation      ; On                 ; On                 ;
@@ -130,7 +527,7 @@ agreement for further details.
 ; Report Connectivity Checks                                                      ; On                 ; On                 ;
 ; Ignore Maximum Fan-Out Assignments                                              ; Off                ; Off                ;
 ; Synchronization Register Chain Length                                           ; 3                  ; 3                  ;
-; PowerPlay Power Optimization                                                    ; Normal compilation ; Normal compilation ;
+; PowerPlay Power Optimization During Synthesis                                   ; Normal compilation ; Normal compilation ;
 ; HDL message level                                                               ; Level2             ; Level2             ;
 ; Suppress Register Optimization Related Messages                                 ; Off                ; Off                ;
 ; Number of Removed Registers Reported in Synthesis Report                        ; 5000               ; 5000               ;
@@ -152,266 +549,226 @@ agreement for further details.
 +---------------------------------------------------------------------------------+--------------------+--------------------+
 
 
-Parallel compilation was disabled, but you have multiple processors available. Enable parallel compilation to reduce compilation time.
-+-------------------------------------+
-; Parallel Compilation                ;
-+----------------------------+--------+
-; Processors                 ; Number ;
-+----------------------------+--------+
-; Number detected on machine ; 4      ;
-; Maximum allowed            ; 1      ;
-+----------------------------+--------+
++---------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "alu:exc"                                                                                 ;
++-----------+--------+----------+-------------------------------------------------------------------------------------+
+; Port      ; Type   ; Severity ; Details                                                                             ;
++-----------+--------+----------+-------------------------------------------------------------------------------------+
+; result    ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; negative  ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; overflow  ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; carry_out ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++-----------+--------+----------+-------------------------------------------------------------------------------------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                 ;
-+----------------------------------+-----------------+------------------------------+----------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                             ; Library ;
-+----------------------------------+-----------------+------------------------------+----------------------------------------------------------+---------+
-; mux2_1.sv                        ; yes             ; User SystemVerilog HDL File  ; C:/Hoc/Engineer/EE 469/Lab/64-bit-Processor/mux2_1.sv    ;         ;
-; mux64_2_1.sv                     ; yes             ; User SystemVerilog HDL File  ; C:/Hoc/Engineer/EE 469/Lab/64-bit-Processor/mux64_2_1.sv ;         ;
-+----------------------------------+-----------------+------------------------------+----------------------------------------------------------+---------+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "Control:c1"                                                                                                                                           ;
++----------+--------+----------+---------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port     ; Type   ; Severity ; Details                                                                                                                                           ;
++----------+--------+----------+---------------------------------------------------------------------------------------------------------------------------------------------------+
+; instr    ; Input  ; Warning  ; Input port expression (11 bits) is smaller than the input port (32 bits) it drives.  Extra input bit(s) "instr[31..11]" will be connected to GND. ;
+; MemtoReg ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                               ;
+; RegWri   ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                               ;
+; MemWri   ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                               ;
+; Readmem  ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                               ;
++----------+--------+----------+---------------------------------------------------------------------------------------------------------------------------------------------------+
 
 
-+---------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary             ;
-+---------------------------------------------+-----------+
-; Resource                                    ; Usage     ;
-+---------------------------------------------+-----------+
-; Estimate of Logic utilization (ALMs needed) ; 32        ;
-;                                             ;           ;
-; Combinational ALUT usage for logic          ; 64        ;
-;     -- 7 input functions                    ; 0         ;
-;     -- 6 input functions                    ; 0         ;
-;     -- 5 input functions                    ; 0         ;
-;     -- 4 input functions                    ; 0         ;
-;     -- <=3 input functions                  ; 64        ;
-;                                             ;           ;
-; Dedicated logic registers                   ; 0         ;
-;                                             ;           ;
-; I/O pins                                    ; 193       ;
-; Total DSP Blocks                            ; 0         ;
-; Maximum fan-out node                        ; sel~input ;
-; Maximum fan-out                             ; 64        ;
-; Total fan-out                               ; 449       ;
-; Average fan-out                             ; 1.00      ;
-+---------------------------------------------+-----------+
++------------------------------------------------+
+; Port Connectivity Checks: "calPC:cal|alu:add1" ;
++----------+-------+----------+------------------+
+; Port     ; Type  ; Severity ; Details          ;
++----------+-------+----------+------------------+
+; cntrl[2] ; Input ; Info     ; Stuck at GND     ;
+; cntrl[1] ; Input ; Info     ; Stuck at VCC     ;
+; cntrl[0] ; Input ; Info     ; Stuck at GND     ;
++----------+-------+----------+------------------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                   ;
-+----------------------------+-------------------+--------------+-------------------+------------+------+--------------+---------------------------------+--------------+
-; Compilation Hierarchy Node ; LC Combinationals ; LC Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name             ; Library Name ;
-+----------------------------+-------------------+--------------+-------------------+------------+------+--------------+---------------------------------+--------------+
-; |mux64_2_1                 ; 64 (0)            ; 0 (0)        ; 0                 ; 0          ; 193  ; 0            ; |mux64_2_1                      ; work         ;
-;    |mux2_1:eachDff[0].m|   ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |mux64_2_1|mux2_1:eachDff[0].m  ; work         ;
-;    |mux2_1:eachDff[10].m|  ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |mux64_2_1|mux2_1:eachDff[10].m ; work         ;
-;    |mux2_1:eachDff[11].m|  ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |mux64_2_1|mux2_1:eachDff[11].m ; work         ;
-;    |mux2_1:eachDff[12].m|  ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |mux64_2_1|mux2_1:eachDff[12].m ; work         ;
-;    |mux2_1:eachDff[13].m|  ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |mux64_2_1|mux2_1:eachDff[13].m ; work         ;
-;    |mux2_1:eachDff[14].m|  ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |mux64_2_1|mux2_1:eachDff[14].m ; work         ;
-;    |mux2_1:eachDff[15].m|  ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |mux64_2_1|mux2_1:eachDff[15].m ; work         ;
-;    |mux2_1:eachDff[16].m|  ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |mux64_2_1|mux2_1:eachDff[16].m ; work         ;
-;    |mux2_1:eachDff[17].m|  ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |mux64_2_1|mux2_1:eachDff[17].m ; work         ;
-;    |mux2_1:eachDff[18].m|  ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |mux64_2_1|mux2_1:eachDff[18].m ; work         ;
-;    |mux2_1:eachDff[19].m|  ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |mux64_2_1|mux2_1:eachDff[19].m ; work         ;
-;    |mux2_1:eachDff[1].m|   ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |mux64_2_1|mux2_1:eachDff[1].m  ; work         ;
-;    |mux2_1:eachDff[20].m|  ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |mux64_2_1|mux2_1:eachDff[20].m ; work         ;
-;    |mux2_1:eachDff[21].m|  ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |mux64_2_1|mux2_1:eachDff[21].m ; work         ;
-;    |mux2_1:eachDff[22].m|  ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |mux64_2_1|mux2_1:eachDff[22].m ; work         ;
-;    |mux2_1:eachDff[23].m|  ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |mux64_2_1|mux2_1:eachDff[23].m ; work         ;
-;    |mux2_1:eachDff[24].m|  ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |mux64_2_1|mux2_1:eachDff[24].m ; work         ;
-;    |mux2_1:eachDff[25].m|  ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |mux64_2_1|mux2_1:eachDff[25].m ; work         ;
-;    |mux2_1:eachDff[26].m|  ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |mux64_2_1|mux2_1:eachDff[26].m ; work         ;
-;    |mux2_1:eachDff[27].m|  ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |mux64_2_1|mux2_1:eachDff[27].m ; work         ;
-;    |mux2_1:eachDff[28].m|  ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |mux64_2_1|mux2_1:eachDff[28].m ; work         ;
-;    |mux2_1:eachDff[29].m|  ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |mux64_2_1|mux2_1:eachDff[29].m ; work         ;
-;    |mux2_1:eachDff[2].m|   ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |mux64_2_1|mux2_1:eachDff[2].m  ; work         ;
-;    |mux2_1:eachDff[30].m|  ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |mux64_2_1|mux2_1:eachDff[30].m ; work         ;
-;    |mux2_1:eachDff[31].m|  ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |mux64_2_1|mux2_1:eachDff[31].m ; work         ;
-;    |mux2_1:eachDff[32].m|  ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |mux64_2_1|mux2_1:eachDff[32].m ; work         ;
-;    |mux2_1:eachDff[33].m|  ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |mux64_2_1|mux2_1:eachDff[33].m ; work         ;
-;    |mux2_1:eachDff[34].m|  ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |mux64_2_1|mux2_1:eachDff[34].m ; work         ;
-;    |mux2_1:eachDff[35].m|  ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |mux64_2_1|mux2_1:eachDff[35].m ; work         ;
-;    |mux2_1:eachDff[36].m|  ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |mux64_2_1|mux2_1:eachDff[36].m ; work         ;
-;    |mux2_1:eachDff[37].m|  ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |mux64_2_1|mux2_1:eachDff[37].m ; work         ;
-;    |mux2_1:eachDff[38].m|  ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |mux64_2_1|mux2_1:eachDff[38].m ; work         ;
-;    |mux2_1:eachDff[39].m|  ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |mux64_2_1|mux2_1:eachDff[39].m ; work         ;
-;    |mux2_1:eachDff[3].m|   ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |mux64_2_1|mux2_1:eachDff[3].m  ; work         ;
-;    |mux2_1:eachDff[40].m|  ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |mux64_2_1|mux2_1:eachDff[40].m ; work         ;
-;    |mux2_1:eachDff[41].m|  ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |mux64_2_1|mux2_1:eachDff[41].m ; work         ;
-;    |mux2_1:eachDff[42].m|  ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |mux64_2_1|mux2_1:eachDff[42].m ; work         ;
-;    |mux2_1:eachDff[43].m|  ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |mux64_2_1|mux2_1:eachDff[43].m ; work         ;
-;    |mux2_1:eachDff[44].m|  ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |mux64_2_1|mux2_1:eachDff[44].m ; work         ;
-;    |mux2_1:eachDff[45].m|  ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |mux64_2_1|mux2_1:eachDff[45].m ; work         ;
-;    |mux2_1:eachDff[46].m|  ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |mux64_2_1|mux2_1:eachDff[46].m ; work         ;
-;    |mux2_1:eachDff[47].m|  ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |mux64_2_1|mux2_1:eachDff[47].m ; work         ;
-;    |mux2_1:eachDff[48].m|  ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |mux64_2_1|mux2_1:eachDff[48].m ; work         ;
-;    |mux2_1:eachDff[49].m|  ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |mux64_2_1|mux2_1:eachDff[49].m ; work         ;
-;    |mux2_1:eachDff[4].m|   ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |mux64_2_1|mux2_1:eachDff[4].m  ; work         ;
-;    |mux2_1:eachDff[50].m|  ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |mux64_2_1|mux2_1:eachDff[50].m ; work         ;
-;    |mux2_1:eachDff[51].m|  ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |mux64_2_1|mux2_1:eachDff[51].m ; work         ;
-;    |mux2_1:eachDff[52].m|  ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |mux64_2_1|mux2_1:eachDff[52].m ; work         ;
-;    |mux2_1:eachDff[53].m|  ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |mux64_2_1|mux2_1:eachDff[53].m ; work         ;
-;    |mux2_1:eachDff[54].m|  ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |mux64_2_1|mux2_1:eachDff[54].m ; work         ;
-;    |mux2_1:eachDff[55].m|  ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |mux64_2_1|mux2_1:eachDff[55].m ; work         ;
-;    |mux2_1:eachDff[56].m|  ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |mux64_2_1|mux2_1:eachDff[56].m ; work         ;
-;    |mux2_1:eachDff[57].m|  ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |mux64_2_1|mux2_1:eachDff[57].m ; work         ;
-;    |mux2_1:eachDff[58].m|  ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |mux64_2_1|mux2_1:eachDff[58].m ; work         ;
-;    |mux2_1:eachDff[59].m|  ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |mux64_2_1|mux2_1:eachDff[59].m ; work         ;
-;    |mux2_1:eachDff[5].m|   ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |mux64_2_1|mux2_1:eachDff[5].m  ; work         ;
-;    |mux2_1:eachDff[60].m|  ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |mux64_2_1|mux2_1:eachDff[60].m ; work         ;
-;    |mux2_1:eachDff[61].m|  ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |mux64_2_1|mux2_1:eachDff[61].m ; work         ;
-;    |mux2_1:eachDff[62].m|  ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |mux64_2_1|mux2_1:eachDff[62].m ; work         ;
-;    |mux2_1:eachDff[63].m|  ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |mux64_2_1|mux2_1:eachDff[63].m ; work         ;
-;    |mux2_1:eachDff[6].m|   ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |mux64_2_1|mux2_1:eachDff[6].m  ; work         ;
-;    |mux2_1:eachDff[7].m|   ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |mux64_2_1|mux2_1:eachDff[7].m  ; work         ;
-;    |mux2_1:eachDff[8].m|   ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |mux64_2_1|mux2_1:eachDff[8].m  ; work         ;
-;    |mux2_1:eachDff[9].m|   ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |mux64_2_1|mux2_1:eachDff[9].m  ; work         ;
-+----------------------------+-------------------+--------------+-------------------+------------+------+--------------+---------------------------------+--------------+
-Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
++----------------------------------------------------------+
+; Port Connectivity Checks: "calPC:cal|alu:add0|mux8_1:m1" ;
++----------+-------+----------+----------------------------+
+; Port     ; Type  ; Severity ; Details                    ;
++----------+-------+----------+----------------------------+
+; in[7..4] ; Input ; Info     ; Stuck at GND               ;
+; in[2..0] ; Input ; Info     ; Stuck at GND               ;
+; in[3]    ; Input ; Info     ; Stuck at VCC               ;
++----------+-------+----------+----------------------------+
 
 
-+------------------------------------------------------+
-; General Register Statistics                          ;
-+----------------------------------------------+-------+
-; Statistic                                    ; Value ;
-+----------------------------------------------+-------+
-; Total registers                              ; 0     ;
-; Number of registers using Synchronous Clear  ; 0     ;
-; Number of registers using Synchronous Load   ; 0     ;
-; Number of registers using Asynchronous Clear ; 0     ;
-; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 0     ;
-; Number of registers using Preset             ; 0     ;
-+----------------------------------------------+-------+
++---------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "calPC:cal|alu:add0"                                                                      ;
++-----------+--------+----------+-------------------------------------------------------------------------------------+
+; Port      ; Type   ; Severity ; Details                                                                             ;
++-----------+--------+----------+-------------------------------------------------------------------------------------+
+; B[63..3]  ; Input  ; Info     ; Stuck at GND                                                                        ;
+; B[1..0]   ; Input  ; Info     ; Stuck at GND                                                                        ;
+; B[2]      ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; cntrl[2]  ; Input  ; Info     ; Stuck at GND                                                                        ;
+; cntrl[1]  ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; cntrl[0]  ; Input  ; Info     ; Stuck at GND                                                                        ;
+; negative  ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; zero      ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; overflow  ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; carry_out ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++-----------+--------+----------+-------------------------------------------------------------------------------------+
 
 
-+-----------------------------------------------------+
-; Post-Synthesis Netlist Statistics for Top Partition ;
-+-----------------------+-----------------------------+
-; Type                  ; Count                       ;
-+-----------------------+-----------------------------+
-; arriav_lcell_comb     ; 64                          ;
-;     normal            ; 64                          ;
-;         3 data inputs ; 64                          ;
-; boundary_port         ; 193                         ;
-;                       ;                             ;
-; Max LUT depth         ; 1.00                        ;
-; Average LUT depth     ; 1.00                        ;
-+-----------------------+-----------------------------+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "calPC:cal|shifter:s1"                                                                                                                                     ;
++----------------+-------+----------+--------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port           ; Type  ; Severity ; Details                                                                                                                                          ;
++----------------+-------+----------+--------------------------------------------------------------------------------------------------------------------------------------------------+
+; direction      ; Input ; Info     ; Stuck at GND                                                                                                                                     ;
+; distance       ; Input ; Warning  ; Input port expression (5 bits) is smaller than the input port (6 bits) it drives.  Extra input bit(s) "distance[5..5]" will be connected to GND. ;
+; distance[4..2] ; Input ; Info     ; Stuck at GND                                                                                                                                     ;
+; distance[2]    ; Input ; Info     ; Stuck at VCC                                                                                                                                     ;
+; distance[1]    ; Input ; Info     ; Stuck at GND                                                                                                                                     ;
++----------------+-------+----------+--------------------------------------------------------------------------------------------------------------------------------------------------+
 
 
-+-------------------------------+
-; Elapsed Time Per Partition    ;
-+----------------+--------------+
-; Partition Name ; Elapsed Time ;
-+----------------+--------------+
-; Top            ; 00:00:01     ;
-+----------------+--------------+
++----------------------------------------+
+; Port Connectivity Checks: "DFF_VAR:cp" ;
++------+-------+----------+--------------+
+; Port ; Type  ; Severity ; Details      ;
++------+-------+----------+--------------+
+; en   ; Input ; Info     ; Stuck at VCC ;
++------+-------+----------+--------------+
 
 
-+-------------------------------+
-; Analysis & Synthesis Messages ;
-+-------------------------------+
++---------------------------------+
+; Analysis & Elaboration Messages ;
++---------------------------------+
 Info: *******************************************************************
-Info: Running Quartus II 64-Bit Analysis & Synthesis
-    Info: Version 14.0.0 Build 200 06/17/2014 SJ Web Edition
-    Info: Processing started: Sat Nov 05 19:56:54 2016
-Info: Command: quartus_map --read_settings_files=on --write_settings_files=off DE1_SoC -c DE1_SoC
+Info: Running Quartus Prime Analysis & Elaboration
+    Info: Version 16.0.0 Build 211 04/27/2016 SJ Standard Edition
+    Info: Processing started: Thu Nov 10 11:13:26 2016
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off DE1_SoC -c DE1_SoC --analysis_and_elaboration
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
 Info (12021): Found 2 design units, including 2 entities, in source file mux32_1.sv
-    Info (12023): Found entity 1: mux32_1
-    Info (12023): Found entity 2: mux32_1_testbench
+    Info (12023): Found entity 1: mux32_1 File: U:/64-bit-Processor/mux32_1.sv Line: 3
+    Info (12023): Found entity 2: mux32_1_testbench File: U:/64-bit-Processor/mux32_1.sv Line: 16
 Info (12021): Found 1 design units, including 1 entities, in source file mux16_1.sv
-    Info (12023): Found entity 1: mux16_1
+    Info (12023): Found entity 1: mux16_1 File: U:/64-bit-Processor/mux16_1.sv Line: 3
 Info (12021): Found 1 design units, including 1 entities, in source file mux8_1.sv
-    Info (12023): Found entity 1: mux8_1
+    Info (12023): Found entity 1: mux8_1 File: U:/64-bit-Processor/mux8_1.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file mux4_1.sv
-    Info (12023): Found entity 1: mux4_1
+    Info (12023): Found entity 1: mux4_1 File: U:/64-bit-Processor/mux4_1.sv Line: 3
 Info (12021): Found 1 design units, including 1 entities, in source file mux2_1.sv
-    Info (12023): Found entity 1: mux2_1
+    Info (12023): Found entity 1: mux2_1 File: U:/64-bit-Processor/mux2_1.sv Line: 3
 Info (12021): Found 1 design units, including 1 entities, in source file d_ff.sv
-    Info (12023): Found entity 1: D_FF
+    Info (12023): Found entity 1: D_FF File: U:/64-bit-Processor/D_FF.sv Line: 3
 Info (12021): Found 2 design units, including 2 entities, in source file dff_var.sv
-    Info (12023): Found entity 1: DFF_VAR
-    Info (12023): Found entity 2: DFF_VAR_testbench
+    Info (12023): Found entity 1: DFF_VAR File: U:/64-bit-Processor/DFF_VAR.sv Line: 3
+    Info (12023): Found entity 2: DFF_VAR_testbench File: U:/64-bit-Processor/DFF_VAR.sv Line: 29
 Info (12021): Found 2 design units, including 2 entities, in source file dff_reg.sv
-    Info (12023): Found entity 1: DFF_REG
-    Info (12023): Found entity 2: DFF_REG_testbench
+    Info (12023): Found entity 1: DFF_REG File: U:/64-bit-Processor/DFF_REG.sv Line: 3
+    Info (12023): Found entity 2: DFF_REG_testbench File: U:/64-bit-Processor/DFF_REG.sv Line: 25
 Info (12021): Found 2 design units, including 2 entities, in source file mux6432_1.sv
-    Info (12023): Found entity 1: mux6432_1
-    Info (12023): Found entity 2: mux6432_1_testbench
+    Info (12023): Found entity 1: mux6432_1 File: U:/64-bit-Processor/mux6432_1.sv Line: 3
+    Info (12023): Found entity 2: mux6432_1_testbench File: U:/64-bit-Processor/mux6432_1.sv Line: 31
 Info (12021): Found 1 design units, including 1 entities, in source file endecoder5_32.sv
-    Info (12023): Found entity 1: enDecoder5_32
+    Info (12023): Found entity 1: enDecoder5_32 File: U:/64-bit-Processor/enDecoder5_32.sv Line: 3
 Info (12021): Found 1 design units, including 1 entities, in source file endecoder4_16.sv
-    Info (12023): Found entity 1: enDecoder4_16
+    Info (12023): Found entity 1: enDecoder4_16 File: U:/64-bit-Processor/enDecoder4_16.sv Line: 3
 Info (12021): Found 1 design units, including 1 entities, in source file endecoder2_4.sv
-    Info (12023): Found entity 1: enDecoder2_4
+    Info (12023): Found entity 1: enDecoder2_4 File: U:/64-bit-Processor/enDecoder2_4.sv Line: 3
 Info (12021): Found 1 design units, including 1 entities, in source file endecoder1_2.sv
-    Info (12023): Found entity 1: enDecoder1_2
+    Info (12023): Found entity 1: enDecoder1_2 File: U:/64-bit-Processor/enDecoder1_2.sv Line: 3
 Info (12021): Found 1 design units, including 1 entities, in source file full_adder.sv
-    Info (12023): Found entity 1: full_adder
+    Info (12023): Found entity 1: full_adder File: U:/64-bit-Processor/full_adder.sv Line: 5
 Info (12021): Found 1 design units, including 1 entities, in source file bit_slice.sv
-    Info (12023): Found entity 1: Bit_Slice
+    Info (12023): Found entity 1: Bit_Slice File: U:/64-bit-Processor/Bit_Slice.sv Line: 2
 Info (12021): Found 1 design units, including 1 entities, in source file or_32.sv
-    Info (12023): Found entity 1: or_32
+    Info (12023): Found entity 1: or_32 File: U:/64-bit-Processor/or_32.sv Line: 2
 Info (12021): Found 1 design units, including 1 entities, in source file or_16.sv
-    Info (12023): Found entity 1: or_16
+    Info (12023): Found entity 1: or_16 File: U:/64-bit-Processor/or_16.sv Line: 2
 Info (12021): Found 1 design units, including 1 entities, in source file or_8.sv
-    Info (12023): Found entity 1: or_8
+    Info (12023): Found entity 1: or_8 File: U:/64-bit-Processor/or_8.sv Line: 2
 Info (12021): Found 1 design units, including 1 entities, in source file or_4.sv
-    Info (12023): Found entity 1: or_4
+    Info (12023): Found entity 1: or_4 File: U:/64-bit-Processor/or_4.sv Line: 2
 Info (12021): Found 1 design units, including 1 entities, in source file zeroflag.sv
-    Info (12023): Found entity 1: ZeroFlag
+    Info (12023): Found entity 1: ZeroFlag File: U:/64-bit-Processor/ZeroFlag.sv Line: 2
 Info (12021): Found 1 design units, including 1 entities, in source file subs.sv
-    Info (12023): Found entity 1: subs
+    Info (12023): Found entity 1: subs File: U:/64-bit-Processor/subs.sv Line: 5
 Info (12021): Found 4 design units, including 4 entities, in source file math.sv
-    Info (12023): Found entity 1: mult
-    Info (12023): Found entity 2: shifter
-    Info (12023): Found entity 3: shifter_testbench
-    Info (12023): Found entity 4: mult_testbench
+    Info (12023): Found entity 1: mult File: U:/64-bit-Processor/math.sv Line: 3
+    Info (12023): Found entity 2: shifter File: U:/64-bit-Processor/math.sv Line: 33
+    Info (12023): Found entity 3: shifter_testbench File: U:/64-bit-Processor/math.sv Line: 48
+    Info (12023): Found entity 4: mult_testbench File: U:/64-bit-Processor/math.sv Line: 68
 Info (12021): Found 2 design units, including 2 entities, in source file regfile.sv
-    Info (12023): Found entity 1: regfile
-    Info (12023): Found entity 2: regstim
+    Info (12023): Found entity 1: regfile File: U:/64-bit-Processor/regfile.sv Line: 7
+    Info (12023): Found entity 2: regstim File: U:/64-bit-Processor/regfile.sv Line: 33
 Info (12021): Found 2 design units, including 2 entities, in source file alu.sv
-    Info (12023): Found entity 1: alu
-    Info (12023): Found entity 2: alustim
+    Info (12023): Found entity 1: alu File: U:/64-bit-Processor/alu.sv Line: 3
+    Info (12023): Found entity 2: alustim File: U:/64-bit-Processor/alu.sv Line: 68
 Info (12021): Found 2 design units, including 2 entities, in source file datamem.sv
-    Info (12023): Found entity 1: datamem
-    Info (12023): Found entity 2: datamem_testbench
+    Info (12023): Found entity 1: datamem File: U:/64-bit-Processor/datamem.sv Line: 12
+    Info (12023): Found entity 2: datamem_testbench File: U:/64-bit-Processor/datamem.sv Line: 70
 Info (12021): Found 2 design units, including 2 entities, in source file instructmem.sv
-    Info (12023): Found entity 1: instructmem
-    Info (12023): Found entity 2: instructmem_testbench
+    Info (12023): Found entity 1: instructmem File: U:/64-bit-Processor/instructmem.sv Line: 17
+    Info (12023): Found entity 2: instructmem_testbench File: U:/64-bit-Processor/instructmem.sv Line: 57
 Info (12021): Found 1 design units, including 1 entities, in source file control.sv
-    Info (12023): Found entity 1: Control
-Info (12021): Found 1 design units, including 1 entities, in source file cpu.sv
-    Info (12023): Found entity 1: CPU
-Info (12021): Found 1 design units, including 1 entities, in source file signextend.sv
-    Info (12023): Found entity 1: SignExtend
+    Info (12023): Found entity 1: Control File: U:/64-bit-Processor/Control.sv Line: 3
+Info (12021): Found 2 design units, including 2 entities, in source file cpu.sv
+    Info (12023): Found entity 1: CPU File: U:/64-bit-Processor/CPU.sv Line: 3
+    Info (12023): Found entity 2: CPU_testbench File: U:/64-bit-Processor/CPU.sv Line: 81
+Info (12021): Found 2 design units, including 2 entities, in source file signextend.sv
+    Info (12023): Found entity 1: SignExtend File: U:/64-bit-Processor/SignExtend.sv Line: 3
+    Info (12023): Found entity 2: SignExtend_testbench File: U:/64-bit-Processor/SignExtend.sv Line: 38
 Info (12021): Found 1 design units, including 1 entities, in source file mux5_2_1.sv
-    Info (12023): Found entity 1: mux5_2_1
+    Info (12023): Found entity 1: mux5_2_1 File: U:/64-bit-Processor/mux5_2_1.sv Line: 2
 Info (12021): Found 1 design units, including 1 entities, in source file mux64_2_1.sv
-    Info (12023): Found entity 1: mux64_2_1
-Info (12127): Elaborating entity "mux64_2_1" for the top level hierarchy
-Info (12128): Elaborating entity "mux2_1" for hierarchy "mux2_1:eachDff[0].m"
-Info (286030): Timing-Driven Synthesis is running
-Info (144001): Generated suppressed messages file C:/Hoc/Engineer/EE 469/Lab/64-bit-Processor/DE1_SoC.map.smsg
-Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
-    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 257 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 129 input pins
-    Info (21059): Implemented 64 output pins
-    Info (21061): Implemented 64 logic cells
-Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 0 warnings
-    Info: Peak virtual memory: 605 megabytes
-    Info: Processing ended: Sat Nov 05 19:56:58 2016
-    Info: Elapsed time: 00:00:04
-    Info: Total CPU time (on all processors): 00:00:05
+    Info (12023): Found entity 1: mux64_2_1 File: U:/64-bit-Processor/mux64_2_1.sv Line: 3
+Info (12021): Found 1 design units, including 1 entities, in source file calpc.sv
+    Info (12023): Found entity 1: calPC File: U:/64-bit-Processor/calPC.sv Line: 3
+Info (12127): Elaborating entity "CPU" for the top level hierarchy
+Info (12128): Elaborating entity "DFF_VAR" for hierarchy "DFF_VAR:cp" File: U:/64-bit-Processor/CPU.sv Line: 31
+Info (12128): Elaborating entity "D_FF" for hierarchy "DFF_VAR:cp|D_FF:eachDff[0].d1" File: U:/64-bit-Processor/DFF_VAR.sv Line: 20
+Info (12128): Elaborating entity "mux2_1" for hierarchy "DFF_VAR:cp|mux2_1:eachDff[0].m1" File: U:/64-bit-Processor/DFF_VAR.sv Line: 21
+Info (12128): Elaborating entity "calPC" for hierarchy "calPC:cal" File: U:/64-bit-Processor/CPU.sv Line: 32
+Info (12128): Elaborating entity "mux64_2_1" for hierarchy "calPC:cal|mux64_2_1:m0" File: U:/64-bit-Processor/calPC.sv Line: 13
+Info (12128): Elaborating entity "shifter" for hierarchy "calPC:cal|shifter:s1" File: U:/64-bit-Processor/calPC.sv Line: 16
+Info (12128): Elaborating entity "alu" for hierarchy "calPC:cal|alu:add0" File: U:/64-bit-Processor/calPC.sv Line: 19
+Info (12128): Elaborating entity "mux8_1" for hierarchy "calPC:cal|alu:add0|mux8_1:m1" File: U:/64-bit-Processor/alu.sv Line: 17
+Info (12128): Elaborating entity "mux4_1" for hierarchy "calPC:cal|alu:add0|mux8_1:m1|mux4_1:m1" File: U:/64-bit-Processor/mux8_1.sv Line: 10
+Info (12128): Elaborating entity "Bit_Slice" for hierarchy "calPC:cal|alu:add0|Bit_Slice:eachDff[0].b1" File: U:/64-bit-Processor/alu.sv Line: 27
+Info (12128): Elaborating entity "full_adder" for hierarchy "calPC:cal|alu:add0|Bit_Slice:eachDff[0].b1|full_adder:fa" File: U:/64-bit-Processor/Bit_Slice.sv Line: 24
+Info (12128): Elaborating entity "subs" for hierarchy "calPC:cal|alu:add0|Bit_Slice:eachDff[0].b1|subs:sub" File: U:/64-bit-Processor/Bit_Slice.sv Line: 26
+Info (12128): Elaborating entity "ZeroFlag" for hierarchy "calPC:cal|alu:add0|ZeroFlag:z1" File: U:/64-bit-Processor/alu.sv Line: 34
+Info (12128): Elaborating entity "or_32" for hierarchy "calPC:cal|alu:add0|ZeroFlag:z1|or_32:o1" File: U:/64-bit-Processor/ZeroFlag.sv Line: 9
+Info (12128): Elaborating entity "or_16" for hierarchy "calPC:cal|alu:add0|ZeroFlag:z1|or_32:o1|or_16:o1" File: U:/64-bit-Processor/or_32.sv Line: 8
+Info (12128): Elaborating entity "or_8" for hierarchy "calPC:cal|alu:add0|ZeroFlag:z1|or_32:o1|or_16:o1|or_8:o1" File: U:/64-bit-Processor/or_16.sv Line: 8
+Info (12128): Elaborating entity "or_4" for hierarchy "calPC:cal|alu:add0|ZeroFlag:z1|or_32:o1|or_16:o1|or_8:o1|or_4:o1" File: U:/64-bit-Processor/or_8.sv Line: 8
+Info (12128): Elaborating entity "instructmem" for hierarchy "instructmem:ins" File: U:/64-bit-Processor/CPU.sv Line: 36
+Warning (10175): Verilog HDL warning at instructmem.sv(24): ignoring unsupported system task File: U:/64-bit-Processor/instructmem.sv Line: 24
+Warning (10850): Verilog HDL warning at instructmem.sv(42): number of words (7) in memory file does not match the number of elements in the address range [0:255] File: U:/64-bit-Processor/instructmem.sv Line: 42
+Info (10648): Verilog HDL Display System Task info at instructmem.sv(43): Running benchmark:  File: U:/64-bit-Processor/instructmem.sv Line: 43
+Info (12128): Elaborating entity "Control" for hierarchy "Control:c1" File: U:/64-bit-Processor/CPU.sv Line: 40
+Info (12128): Elaborating entity "SignExtend" for hierarchy "SignExtend:SE" File: U:/64-bit-Processor/CPU.sv Line: 43
+Info (12128): Elaborating entity "mux5_2_1" for hierarchy "mux5_2_1:mRD" File: U:/64-bit-Processor/CPU.sv Line: 47
+Info (12128): Elaborating entity "regfile" for hierarchy "regfile:r" File: U:/64-bit-Processor/CPU.sv Line: 50
+Info (12128): Elaborating entity "enDecoder5_32" for hierarchy "regfile:r|enDecoder5_32:a1" File: U:/64-bit-Processor/regfile.sv Line: 24
+Info (12128): Elaborating entity "enDecoder1_2" for hierarchy "regfile:r|enDecoder5_32:a1|enDecoder1_2:n1" File: U:/64-bit-Processor/enDecoder5_32.sv Line: 9
+Info (12128): Elaborating entity "enDecoder4_16" for hierarchy "regfile:r|enDecoder5_32:a1|enDecoder4_16:a1" File: U:/64-bit-Processor/enDecoder5_32.sv Line: 11
+Info (12128): Elaborating entity "enDecoder2_4" for hierarchy "regfile:r|enDecoder5_32:a1|enDecoder4_16:a1|enDecoder2_4:n1" File: U:/64-bit-Processor/enDecoder4_16.sv Line: 9
+Info (12128): Elaborating entity "DFF_REG" for hierarchy "regfile:r|DFF_REG:d1" File: U:/64-bit-Processor/regfile.sv Line: 25
+Info (12128): Elaborating entity "mux6432_1" for hierarchy "regfile:r|mux6432_1:m1" File: U:/64-bit-Processor/regfile.sv Line: 26
+Info (12128): Elaborating entity "mux32_1" for hierarchy "regfile:r|mux6432_1:m1|mux32_1:eachDff[0].m" File: U:/64-bit-Processor/mux6432_1.sv Line: 25
+Info (12128): Elaborating entity "mux16_1" for hierarchy "regfile:r|mux6432_1:m1|mux32_1:eachDff[0].m|mux16_1:m1" File: U:/64-bit-Processor/mux32_1.sv Line: 10
+Warning (12241): 2 hierarchies have connectivity warnings - see the Connectivity Checks report folder
+Info (144001): Generated suppressed messages file U:/64-bit-Processor/DE1_SoC.map.smsg
+Info: Quartus Prime Analysis & Elaboration was successful. 0 errors, 4 warnings
+    Info: Peak virtual memory: 1068 megabytes
+    Info: Processing ended: Thu Nov 10 11:14:03 2016
+    Info: Elapsed time: 00:00:37
+    Info: Total CPU time (on all processors): 00:00:36
 
 
-+------------------------------------------+
-; Analysis & Synthesis Suppressed Messages ;
-+------------------------------------------+
-The suppressed messages can be found in C:/Hoc/Engineer/EE 469/Lab/64-bit-Processor/DE1_SoC.map.smsg.
++--------------------------------------------+
+; Analysis & Elaboration Suppressed Messages ;
++--------------------------------------------+
+The suppressed messages can be found in U:/64-bit-Processor/DE1_SoC.map.smsg.
 
 
