@@ -6,7 +6,7 @@ module CPU(clk, reset);
 	//regfile
 	logic [63:0]WriteData;
 	logic [4:0]ReadRegister1, ReadRegister2, WriteRegister;
-	logic RegWrite;
+	//logic RegWrite;
 	logic [63:0]ReadData1, ReadData2;
 	//ALU
 	logic	[2:0]		cntrl;
@@ -20,9 +20,9 @@ module CPU(clk, reset);
 //	logic	read_enable;
 //	logic	[63:0]	write_data;
 //	logic	[3:0]		xfer_size;
-//	logic	[63:0]	read_data;
+	logic	[63:0]	read_data;
 	//control
-	logic Reg2Loc, ALUsrc, MemtoReg, RegWri, MemWri, BrTaken, UncondBr, Readmem, ALUsrc1;
+	logic Reg2Loc, ALUsrc, MemtoReg, RegWrite, MemWri, BrTaken, UncondBr, Readmem, ALUsrc1;
 	logic [2:0]ALUOp;
 	logic [63:0]DAddr9, CondAddr19, BrAddr26, Imm12, ALUsrc_re;
 	
@@ -36,15 +36,17 @@ module CPU(clk, reset);
 	instructmem ins (PC,instruction,clk);
 	
 	//CONTROL: run the instruction through the control signal
-	Control c1 (instruction[31:21], zero, Reg2Loc, ALUsrc, MemtoReg,
-	RegWri, MemWri, BrTaken, UncondBr, ALUOp, Readmem, ALUsrc1);
+	Control c1 (instruction, zero, Reg2Loc, ALUsrc, MemtoReg,
+	RegWrite, MemWri, BrTaken, UncondBr, ALUOp, Readmem, ALUsrc1);
 	
 	//sign-extend result
 	SignExtend SE (instruction, DAddr9, CondAddr19, BrAddr26, Imm12);
 	
 	//REGFILE: Rd,Rn,Rm, RegWrite, Reg2Loc, Da, Db
 	assign ReadRegister1 = instruction[9:5];
-	mux5_2_1 mRD (Reg2Loc,instruction[20:16],instruction[4:0],ReadRegister2);
+	mux5_2_1 mRD (Reg2Loc,instruction[4:0],instruction[20:16],ReadRegister2);
+	
+	assign WriteRegister = instruction[4:0];
 	regfile r (ReadData1, ReadData2, WriteData, 
 					 ReadRegister1, ReadRegister2, WriteRegister,
 					 RegWrite, clk,reset);
@@ -57,13 +59,13 @@ module CPU(clk, reset);
 	
 	//
 	
-	
+
 	
 	
 	//get the data from datamemmory result of the ALU
 //	//assign write_data = ReadData2;
 //	//datamem da (result, write_enable, read_enable, write_data, clk, 4'd4, read_data);
-	
+	mux64_2_1 m5(MemtoReg, result, read_data, WriteData);
 	
 	
 	
@@ -80,14 +82,39 @@ endmodule
 
 module CPU_testbench ();
 	logic clk,reset;
-	
-	parameter ClockDelay = 5000;
-	
-	CPU cp(clk,reset);
-	initial $timeformat(-9, 2, " ns", 10);
+	CPU dut (clk, reset);
 
-	initial begin // Set up the clock
-		clk <= 0;
-		forever #(ClockDelay/2) clk <= ~clk;
-	end
+parameter CLOCK_PERIOD  = 1000000; 
+
+initial begin
+clk <= 0; 
+
+forever # (CLOCK_PERIOD  ) clk <= ~clk; 
+
+end 
+
+initial begin 
+
+reset <= 1;								@(posedge clk);
+											@(posedge clk); 
+											@(posedge clk); 
+reset <= 0;   							@(posedge clk);
+											@(posedge clk); 
+											@(posedge clk); 
+											@(posedge clk); 
+											@(posedge clk); 
+											@(posedge clk); 
+											@(posedge clk); 
+											@(posedge clk); 
+											@(posedge clk); 
+											@(posedge clk); 
+											@(posedge clk);
+											@(posedge clk); 
+											@(posedge clk); 
+											@(posedge clk);	
+
+
+
+$stop ; // End Simulation 
+end  
 endmodule

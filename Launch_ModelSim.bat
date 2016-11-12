@@ -1,1 +1,1 @@
-C:\altera\14.0\modelsim_ase\win32aloem\modelsim.exe
+U:/64-bit-Processor

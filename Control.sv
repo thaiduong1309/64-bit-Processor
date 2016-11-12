@@ -24,8 +24,8 @@ module Control (instr, zero, Reg2Loc, ALUsrc, MemtoReg, RegWri, MemWri, BrTaken,
 	end
 	//ADDI: 244
 	11'b1001000100x: begin
-		Reg2Loc	= 1'b0;
-		ALUsrc	= 1'b0;
+		Reg2Loc	= 1'bX;
+		ALUsrc	= 1'b1;
 		MemtoReg = 1'b0;
 		RegWri	= 1'b1;
 		MemWri	= 1'b0;
@@ -37,8 +37,8 @@ module Control (instr, zero, Reg2Loc, ALUsrc, MemtoReg, RegWri, MemWri, BrTaken,
 	end
 	//SUBI: 344
 	11'b1101000100x: begin
-		Reg2Loc	= 1'b0;
-		ALUsrc	= 1'b0;
+		Reg2Loc	= 1'bX;
+		ALUsrc	= 1'b1;
 		MemtoReg = 1'b0;
 		RegWri	= 1'b1;
 		MemWri	= 1'b0;

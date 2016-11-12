@@ -13,7 +13,7 @@ module calPC (PC,PC_result, CondAddr19, BrAddr26, UncondBr, BrTaken);
 	mux64_2_1 m0 (UncondBr,CondAddr19, BrAddr26, pick);
 	
 	//shift left by 2 the result from the UncondBr mux  
-	shifter s1 (pick, 1'b0, 5'd2, shift_pick);
+	shifter s1 (pick, 1'b0, 6'd2, shift_pick);
 	
 	//
 	alu add0 (PC,64'd4,3'b010,result0,negative,zero,overflow,carry_out);
