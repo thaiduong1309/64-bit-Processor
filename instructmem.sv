@@ -8,7 +8,8 @@
 //`define BENCHMARK "U:/64-bit-Processor/benchmarks/test03_CbzB.arm"
 //`define BENCHMARK "U:/64-bit-Processor/benchmarks/test04_LdurStur.arm"
 //`define BENCHMARK "U:/64-bit-Processor/benchmarks/test05_Blt.arm"
-`define BENCHMARK "U:/64-bit-Processor/benchmarks/test06_BlBr.arm"
+//`define BENCHMARK "C:/Hoc/Engineer/EE 469/64-bit-Processor/benchmarks/test06_BlBr.arm"
+`define BENCHMARK "C:/Hoc/Engineer/EE 469/64-bit-Processor/benchmarks/test05_Blt.arm"
 
 `timescale 1ns/10ps
 

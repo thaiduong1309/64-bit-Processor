@@ -2,7 +2,7 @@ library verilog;
 use verilog.vl_types.all;
 entity alu is
     generic(
-        \in\            : vl_logic_vector(7 downto 0) := (Hi0, Hi0, Hi0, Hi0, Hi1, Hi0, Hi0, Hi0)
+        c_in            : vl_logic_vector(7 downto 0) := (Hi0, Hi0, Hi0, Hi0, Hi1, Hi0, Hi0, Hi0)
     );
     port(
         A               : in     vl_logic_vector(63 downto 0);
@@ -15,5 +15,5 @@ entity alu is
         carry_out       : out    vl_logic
     );
     attribute mti_svvh_generic_type : integer;
-    attribute mti_svvh_generic_type of \in\ : constant is 2;
+    attribute mti_svvh_generic_type of c_in : constant is 2;
 end alu;

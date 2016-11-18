@@ -1,9 +1,9 @@
 `timescale 1 ps / 100 fs
 
-module Control (instr, zero, Reg2Loc, ALUsrc, MemtoReg, RegWri, MemWri, BrTaken, UncondBr, ALUOp, Readmem, ALUsrc1,enFlags, WriteRd, BR);
+module Control (instr, zero, negative ,Reg2Loc, ALUsrc, MemtoReg, RegWri, MemWri, BrTaken, UncondBr, ALUOp, Readmem, ALUsrc1,enFlags, WriteRd, BR);
 
 	input logic [31:0]instr;
-	input logic zero;
+	input logic zero, negative;
 	output logic [2:0]ALUOp;
 	output logic Reg2Loc, ALUsrc, MemtoReg, RegWri, MemWri, BrTaken, UncondBr, Readmem, ALUsrc1, enFlags, WriteRd, BR;
 	
@@ -139,21 +139,21 @@ module Control (instr, zero, Reg2Loc, ALUsrc, MemtoReg, RegWri, MemWri, BrTaken,
 	end
 	
 	//B.LT
-//	11'b100101xxxxx: begin
-//		Reg2Loc	= 1'bX;
-//		ALUsrc	= 1'bX;
-//		MemtoReg = 1'bX;
-//		RegWri	= 1'b1;
-//		MemWri	= 1'b0;
-//		BrTaken	= 1'b1;
-//		UncondBr = 1'b1;
-//		ALUOp		= 3'bX;
-//		Readmem  = 1'bX;
-//		ALUsrc1 	= 1'bX;
-//		enFlags  = 1'bX;
-//		WriteRd  = 1'b1;
-//		BR 		= 1'b0;
-//	end
+	11'b01010100xxx: begin
+		Reg2Loc	= 1'bX;
+		ALUsrc	= 1'bX;
+		MemtoReg = 1'bX;
+		RegWri	= 1'b0;
+		MemWri	= 1'b0;
+		BrTaken	= negative;
+		UncondBr = 1'b0;
+		ALUOp		= 3'bX;
+		Readmem  = 1'bX;
+		ALUsrc1 	= 1'bX;
+		enFlags  = 1'b1;
+		WriteRd  = 1'bX;
+		BR 		= 1'b0;
+	end
 	
 	//BL: 
 	11'b100101xxxxx: begin

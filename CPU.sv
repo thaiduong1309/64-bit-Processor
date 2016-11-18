@@ -42,10 +42,13 @@ module CPU(clk, reset);
 	instructmem ins (PC,instruction,clk);
 	
 	//CONTROL: run the instruction through the control signal
-	Control c1 (instruction, zero, Reg2Loc, ALUsrc, MemtoReg,
+	Control c1 (instruction, zero, flag[0], Reg2Loc, ALUsrc, MemtoReg,
 	RegWrite, MemWri, BrTaken, UncondBr, ALUOp, Readmem, ALUsrc1, enFlags, WriteRd, BR);
 	
-	//
+	//negative is bit0 of flag
+	//zero is bit1 of flag
+	// overflow is bit 3 of flag
+	//carry_out is bit 4 of flag
 	flags f (enFlags, negative,zero,overflow,carry_out, reset, clk, flag);
 	
 	//sign-extend result
@@ -59,6 +62,10 @@ module CPU(clk, reset);
 	
 	// Pick between datamem and result from ALU
 	mux64_2_1 m5(MemtoReg, result, read_data, WriteData1);
+	
+	/***************************************************/
+	/**********************REGFILE**********************/
+	/***************************************************/
 	
 	//REGFILE: Rd,Rn,Rm, RegWrite, Reg2Loc, Da, Db
 	
