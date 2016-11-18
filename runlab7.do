@@ -36,6 +36,9 @@ vlog "./Control.sv"
 vlog "./CPU.sv"
 vlog "./calPC.sv"
 vlog "./SignExtend.sv"
+vlog "./flags.sv"
+vlog "./DFF_VAR1.sv"
+vlog "./D_FF1.sv"
 
 
 # Call vsim to invoke simulator

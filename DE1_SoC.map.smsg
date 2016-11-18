@@ -1,5 +1,4 @@
-Warning (10273): Verilog HDL warning at Control.sv(99): extended using "x" or "z" File: U:/64-bit-Processor/Control.sv Line: 99
-Warning (10273): Verilog HDL warning at Control.sv(125): extended using "x" or "z" File: U:/64-bit-Processor/Control.sv Line: 125
-Warning (10030): Net "mem.data_a" at instructmem.sv(38) has no driver or initial value, using a default initial value '0' File: U:/64-bit-Processor/instructmem.sv Line: 38
-Warning (10030): Net "mem.waddr_a" at instructmem.sv(38) has no driver or initial value, using a default initial value '0' File: U:/64-bit-Processor/instructmem.sv Line: 38
-Warning (10030): Net "mem.we_a" at instructmem.sv(38) has no driver or initial value, using a default initial value '0' File: U:/64-bit-Processor/instructmem.sv Line: 38
+Warning (10273): Verilog HDL warning at Control.sv(117): extended using "x" or "z"
+Warning (10273): Verilog HDL warning at Control.sv(149): extended using "x" or "z"
+Warning (10273): Verilog HDL warning at Control.sv(166): extended using "x" or "z"
+Warning (10273): Verilog HDL warning at Control.sv(182): extended using "x" or "z"

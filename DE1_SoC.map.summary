@@ -1,5 +1,5 @@
-Analysis & Elaboration Status : Successful - Fri Nov 11 12:31:36 2016
-Quartus Prime Version : 16.0.0 Build 211 04/27/2016 SJ Standard Edition
+Analysis & Synthesis Status : Failed - Thu Nov 17 19:17:29 2016
+Quartus II 64-Bit Version : 14.1.0 Build 186 12/03/2014 SJ Full Version
 Revision Name : DE1_SoC
 Top-level Entity Name : CPU
 Family : Cyclone V
