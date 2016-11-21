@@ -3,13 +3,15 @@
 // two words of the address must be 0).
 //
 // To change the file that is loaded, edit the filename here:
-//`define BENCHMARK "../benchmarks/test01_AddiB.arm"
+//`define BENCHMARK "U:/64-bit-Processor/benchmarks/test01_AddiB.arm"
 //`define BENCHMARK "U:/64-bit-Processor/benchmarks/test02_AddsSubs.arm"
 //`define BENCHMARK "U:/64-bit-Processor/benchmarks/test03_CbzB.arm"
 //`define BENCHMARK "U:/64-bit-Processor/benchmarks/test04_LdurStur.arm"
 //`define BENCHMARK "U:/64-bit-Processor/benchmarks/test05_Blt.arm"
-//`define BENCHMARK "C:/Hoc/Engineer/EE 469/64-bit-Processor/benchmarks/test06_BlBr.arm"
-`define BENCHMARK "C:/Hoc/Engineer/EE 469/64-bit-Processor/benchmarks/test05_Blt.arm"
+//`define BENCHMARK "U:/64-bit-Processor/benchmarks/test06_BlBr.arm"
+//`define BENCHMARK "U:/64-bit-Processor/benchmarks/test10_forwarding.arm"
+//`define BENCHMARK "U:/64-bit-Processor/benchmarks/test11_Sort.arm"
+`define BENCHMARK "U:/64-bit-Processor/benchmarks/test12_Fibonacci.arm"
 
 `timescale 1ns/10ps
 

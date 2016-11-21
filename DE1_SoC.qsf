@@ -42,7 +42,7 @@ set_global_assignment -name DEVICE 5CGXFC7C7F23C8
 set_global_assignment -name TOP_LEVEL_ENTITY CPU
 set_global_assignment -name ORIGINAL_QUARTUS_VERSION 14.1.0
 set_global_assignment -name PROJECT_CREATION_TIME_DATE "13:05:59  OCTOBER 28, 2016"
-set_global_assignment -name LAST_QUARTUS_VERSION 14.0
+set_global_assignment -name LAST_QUARTUS_VERSION 14.1.0
 set_global_assignment -name MIN_CORE_JUNCTION_TEMP 0
 set_global_assignment -name MAX_CORE_JUNCTION_TEMP 85
 set_global_assignment -name POWER_PRESET_COOLING_SOLUTION "23 MM HEAT SINK WITH 200 LFPM AIRFLOW"

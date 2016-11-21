@@ -13,6 +13,7 @@ module CPU(clk, reset);
 	logic	[2:0]		cntrl;
 	logic	[63:0]	A, B, result;
 	logic	negative, zero, overflow, carry_out;
+	logic [3:0] flag;
 	
 	//instrumem
 	logic	[31:0]	instruction;
@@ -28,31 +29,39 @@ module CPU(clk, reset);
 	logic Reg2Loc, ALUsrc, MemtoReg, RegWrite, MemWri, BrTaken, UncondBr, Readmem, ALUsrc1, enFlags, WriteRd, BR;
 	logic [2:0]ALUOp;
 	logic [63:0]DAddr9, CondAddr19, BrAddr26, Imm12, ALUsrc_re;
-	//
-	logic [3:0] flag;
 	
 	
+	/*************************************************************/
+	/*********************INSTRUCTION_MEM(PC)*********************/
+	/*************************************************************/
 	//Program counter
 	DFF_VAR cp (1'b1, PC, clk, reset, PC_result);
 	mux64_2_1 mBR(BR, PC1, ReadData2, PC_result);
 	calPC cal (PC,PC1, PCadd4, CondAddr19, BrAddr26, UncondBr, BrTaken);
-	
-	
 	//get the instruction from instruction memory
 	instructmem ins (PC,instruction,clk);
 	
+	
+	/*************************************************************/
+	/***********************CONTROL SIGNAL***********************/
+	/*************************************************************/
 	//CONTROL: run the instruction through the control signal
-	Control c1 (instruction, zero, flag[0], Reg2Loc, ALUsrc, MemtoReg,
+	Control c1 (instruction, zero, flag, Reg2Loc, ALUsrc, MemtoReg,
 	RegWrite, MemWri, BrTaken, UncondBr, ALUOp, Readmem, ALUsrc1, enFlags, WriteRd, BR);
 	
 	//negative is bit0 of flag
 	//zero is bit1 of flag
-	// overflow is bit 3 of flag
-	//carry_out is bit 4 of flag
+	// overflow is bit 2 of flag
+	//carry_out is bit 3 of flag
 	flags f (enFlags, negative,zero,overflow,carry_out, reset, clk, flag);
 	
 	//sign-extend result
 	SignExtend SE (instruction, DAddr9, CondAddr19, BrAddr26, Imm12);
+	
+	
+	/*************************************************************/
+	/************************EXECUTION ALU************************/
+	/*************************************************************/
 	
 	//Execution step
 	assign A = ReadData1;
@@ -63,9 +72,14 @@ module CPU(clk, reset);
 	// Pick between datamem and result from ALU
 	mux64_2_1 m5(MemtoReg, result, read_data, WriteData1);
 	
-	/***************************************************/
-	/**********************REGFILE**********************/
-	/***************************************************/
+	
+	
+	/*************************************************************/
+	/***************************REGFILE***************************/
+	/*************************************************************/
+	
+	
+	
 	
 	//REGFILE: Rd,Rn,Rm, RegWrite, Reg2Loc, Da, Db
 	
@@ -83,7 +97,9 @@ module CPU(clk, reset);
 					 RegWrite, clk,reset);
 	
 	
-	//
+	/*************************************************************/
+	/***************************DATAMEM***************************/
+	/*************************************************************/
 	
 
 	
@@ -102,7 +118,7 @@ module CPU_testbench ();
 	logic clk,reset;
 	CPU dut (clk, reset);
 
-parameter CLOCK_PERIOD  = 1000000; 
+parameter CLOCK_PERIOD  = 2500; 
 
 initial begin
 clk <= 0; 
@@ -112,28 +128,12 @@ forever #(CLOCK_PERIOD/2) clk <= ~clk;
 end
 
 initial begin 
-reset <= 1;								@(posedge clk); 
+reset <= 1;								@(posedge clk);
+											@(posedge clk); 
 reset <= 0;   							@(posedge clk);
 											@(posedge clk); 
-											@(posedge clk); 
-											@(posedge clk); 
-											@(posedge clk); 
-											@(posedge clk); 
-											@(posedge clk); 
-											@(posedge clk); 
-											@(posedge clk); 
-											@(posedge clk); 
-											@(posedge clk);
-											@(posedge clk); 
-											@(posedge clk); 
-											@(posedge clk);
-											@(posedge clk);
-											@(posedge clk); 
-											@(posedge clk); 
-											@(posedge clk);
-											@(posedge clk); 
-											@(posedge clk); 
-											@(posedge clk);	
+repeat(1200)	begin										@(posedge clk); end
+	
 
 
 
